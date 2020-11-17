@@ -1,0 +1,31 @@
+body,*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+#header{
+    width: auto;
+    padding: 2rem;
+    text-align: center;
+    background: firebrick;
+    height: 100px;
+}
+
+#header>h1{
+    color: #ffffff;
+    padding-bottom: 1rem;
+
+}
+
+ul{
+    margin-top: 2rem;
+}
+li {
+    margin-block-end: 1rem;
+}
+
+li.checked{
+    text-decoration: line-through;
+}
+
