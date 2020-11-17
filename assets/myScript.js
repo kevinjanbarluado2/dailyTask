@@ -4,7 +4,7 @@ myListArr = (localStorage.getItem("myTasks")===null)?[]:JSON.parse(localStorage.
 
 let listMaker=(x,y)=>{
     let checked=(x.done)?"checked":"";
-    return `<li class="${checked}"><input type="checkbox" onChange="ifChecked(${y})" ${checked} /> ${x.list} <button onClick=deleteMe(${y})>Remove</button></li>`;
+    return `<li class="${checked}"><input type="checkbox" onChange="ifChecked(${y})" ${checked} /> ${x.list} <button class="deleteMe" onClick=deleteMe(${y})>x</button></li>`;
 }
 function refresh(){
 myList.innerHTML='';
@@ -23,6 +23,7 @@ let setLocal=()=>{
 let clearMe=()=>{
     [myListArr,myList.innerHTML]=[[],""];
     setLocal();
+    
     
 }
 
@@ -50,3 +51,9 @@ function ifChecked(index){
     document.querySelectorAll('li')[index].className=className;
 
 }
+
+document.addEventListener('keydown', (event) => {
+    if(event.key == "Enter") {
+        addMe();
+      }
+});

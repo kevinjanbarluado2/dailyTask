@@ -29,3 +29,21 @@ li.checked{
     text-decoration: line-through;
 }
 
+button, input{
+    border: none;
+    padding: .5rem .8rem;
+    border-radius: 4px;
+}
+
+#center{
+width: 35%;
+background-color: #eaeaea;
+margin:0 auto;
+padding: 0 1rem;
+}
+
+.deleteMe{
+float: right;
+background-color: firebrick;
+color:white
+}
